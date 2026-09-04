@@ -1,0 +1,8 @@
+{
+  "montadora": "Scania",
+  "modelo": "8450",
+  "sistema_telemetria": "Scania Fleet Management",
+  "status": "OK",
+  "conexao": true,
+  "velocidade_media": 82
+}

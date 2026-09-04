@@ -1,0 +1,20 @@
+===== AUDITORIA DE SEGURANÇA =====
+Data: Fri Aug  7 11:15:14 PM UTC 2026
+
+Tentativa 1 - Sem API Key
+{"erro":"Acesso não autorizado. Header 'X-API-KEY' inválido ou ausente."}
+Status HTTP: 401
+
+Tentativa 2 - Sem API Key
+{"erro":"Acesso não autorizado. Header 'X-API-KEY' inválido ou ausente."}
+Status HTTP: 401
+
+Tentativa 3 - Sem API Key
+{"erro":"Acesso não autorizado. Header 'X-API-KEY' inválido ou ausente."}
+Status HTTP: 401
+
+Tentativa 4 - Com API Key válida
+[{"id":1,"nome":"Carlos Silva","cnh":"123456789000","categoria":"E","ativo":true},{"id":2,"nome":"Ana Pereira","cnh":"987654321000","categoria":"D","ativo":true}]
+Status HTTP: 200
+
+===== FIM DA AUDITORIA =====

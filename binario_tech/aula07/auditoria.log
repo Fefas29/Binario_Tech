@@ -1,0 +1,12 @@
+===== AUDITORIA COMPLETA =====
+Data: Fri Aug 21 01:54:17 AM UTC 2026
+
+===== SCANIA =====
+{"montadora":"Scania","dados":[{"id":1,"modelo":"R450","vin":"9BS123456789","temperatura_motor":88,"status":"OK"},{"id":2,"modelo":"S500","vin":"9BS987654321","temperatura_motor":102,"status":"ALERTA_AQUECIMENTO"}]}
+Status HTTP: 200
+
+===== MERCEDES-BENZ =====
+{"montadora":"Mercedes-Benz","dados":[{"id":1,"modelo":"Actros","vin":"9BM123456789","temperatura_motor":90,"status":"OK"},{"id":2,"modelo":"Atego","vin":"9BM987654321","temperatura_motor":95,"status":"OK"}]}
+Status HTTP: 200
+
+===== FIM DA AUDITORIA =====
