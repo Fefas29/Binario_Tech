@@ -3,6 +3,7 @@ const cors = require('cors');
 const veiculoRoutes = require('./src/routes/veiculoRoutes');
 const gerenciadorErros = require('./src/middlewares/gerenciadorErros');
 const verificarJson = require('./src/middlewares/verificarJson');
+const verificarHeaderJson = require('./src/middlewares/verificarHeaderJson');
 
 const app = express();
 const PORT = 3000;

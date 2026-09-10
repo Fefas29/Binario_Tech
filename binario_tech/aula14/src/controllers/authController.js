@@ -16,9 +16,7 @@ const authController = {
 
       // Validar tamanho mínimo da senha
       if (senha.length < 6) {
-        return res.status(400).json({
-          mensagem: "A senha deve possuir pelo menos 6 caracteres."
-        });
+        return res.status(400).json({ mensagem: "A senha deve possuir pelo menos 6 caracteres." });
       }
 
       const usuarioExiste = usuariosDB.find(u => u.email === email);
@@ -28,19 +26,19 @@ const authController = {
 
       // Criptografar a senha com salt (fator de custo 10)
       const senhaHash = await bcrypt.hash(senha, 10);
-
-      const novoUsuario = {
-        id: usuariosDB.length + 1,
-        email,
-        senhaHash,
-        perfil: perfil || 'OPERADOR'
+      
+      const novoUsuario = { 
+        id: usuariosDB.length + 1, 
+        email, 
+        senhaHash, 
+        perfil: perfil || 'OPERADOR' 
       };
-
+      
       usuariosDB.push(novoUsuario);
 
-      res.status(201).json({
-        mensagem: "Usuário registrado com sucesso!",
-        usuarioId: novoUsuario.id
+      res.status(201).json({ 
+        mensagem: "Usuário registrado com sucesso!", 
+        usuarioId: novoUsuario.id 
       });
     } catch (erro) {
       res.status(500).json({ erro: "Erro ao registrar usuário." });
@@ -63,11 +61,13 @@ const authController = {
         return res.status(401).json({ mensagem: "Credenciais inválidas." });
       }
 
+      const segredo = process.env.JWT_SECRET || 'binario_tech_chave_secreta_super_segura_2026';
+
       // Gerar o token JWT (expira em 1 hora)
       const token = jwt.sign(
         { id: usuario.id, email: usuario.email, perfil: usuario.perfil },
-        process.env.JWT_SECRET,
-        { expiresIn: '1h' }
+        segredo,
+        { expiresIn: '15s' }
       );
 
       res.status(200).json({ status: "AUTENTICADO", token });

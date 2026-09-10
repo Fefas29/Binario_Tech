@@ -2,14 +2,15 @@ const jwt = require('jsonwebtoken');
 
 const autenticarToken = (req, res, next) => {
   const authHeader = req.headers['authorization'];
-  const token = authHeader && authHeader.split(' ')[1]; // Formato "Bearer TOKEN"
+  const token = authHeader && authHeader.split(' ')[1];
 
   if (!token) {
     return res.status(401).json({ status: "ERRO", mensagem: "Acesso negado. Token não fornecido." });
   }
 
   try {
-    const usuarioVerificado = jwt.verify(token, process.env.JWT_SECRET);
+    const segredo = process.env.JWT_SECRET || 'binario_tech_chave_secreta_super_segura_2026';
+    const usuarioVerificado = jwt.verify(token, segredo);
     req.usuario = usuarioVerificado;
     next();
   } catch (erro) {
