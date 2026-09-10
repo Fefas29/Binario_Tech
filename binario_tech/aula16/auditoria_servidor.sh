@@ -3,6 +3,10 @@
 echo "====================================="
 echo " AUDITORIA DO SERVIDOR BINARIO TECH"
 echo "====================================="
-curl -s http://localhost:3011/api/v1/status-servidor | jq .
 
-curl -s http://localhost:3011/api/v1/status-servidor > processos.log | jq .
+echo"Listando o resultado da lista"
+ps aux | grep node >> ./processos.log
+
+echo"Resultado da Lista"
+sleep 2
+cat processos.log
