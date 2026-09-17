@@ -1,12 +1,10 @@
 #!/bin/bash
 
-echo "====================================="
-echo " AUDITORIA DO SERVIDOR BINARIO TECH"
-echo "====================================="
+echo "================================"
+echo " AUDITORIA DE PROCESSOS NODE.JS "
+echo "================================"
 
-echo"Listando o resultado da lista"
-ps aux | grep node >> ./processos.log
+ps aux | grep node > processos.log
 
-echo"Resultado da Lista"
-sleep 2
-cat processos.log
+echo "Auditoria concluída!"
+echo "Resultado salvo em processos.log"
