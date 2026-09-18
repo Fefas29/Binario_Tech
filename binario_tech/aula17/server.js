@@ -6,7 +6,7 @@ const conectarBanco = require('./src/config/database');
 const autenticar = require('./src/middlewares/autenticar');
 
 const app = express();
-const PORT = process.env.PORT || 3029;
+const PORT = process.env.PORT || 3011;
 
 app.use(cors());
 app.use(express.json());
