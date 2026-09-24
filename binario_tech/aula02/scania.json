@@ -1,8 +1,1 @@
-{
-  "montadora": "Scania",
-  "modelo": "8450",
-  "status": "OK",
-  "conexao": true,
-  "velocidade_media": 82,
-  "sistema_telemetria": "Ativo"
-}
+{"montadora":"Scania","foco":"Caminhões Pesados e Ônibus","sistema_telemetria":"Ativo","unidades_conectadas":1420}
