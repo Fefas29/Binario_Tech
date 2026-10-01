@@ -3,6 +3,8 @@ echo "=================================================="
 echo "    PIPELINE DE DEPLOY AUTOMATIZADO - BINÁRIO TECH"
 echo "=================================================="
 
+echo "$(date) - Commit: $(git rev-parse --short HEAD)" >> deploy_history.log
+
 REPO_DIR="/home/felipe.rosa/Binario_Tech/binario_tech"
 APP_NAME="api-cicd"
 PORT=3011
