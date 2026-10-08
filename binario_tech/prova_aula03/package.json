@@ -2,14 +2,18 @@
   "name": "prova_aula03",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "telemetria.js",
   "scripts": {
+	  "start": "node telemetria.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "type": "commomjs",
   "license": "ISC",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+	  "nodemon": "^3.1.14"
   }
 }
